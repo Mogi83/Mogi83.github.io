@@ -19,7 +19,7 @@ title: Mogi # the main title
 tagline: A place to share my projects # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A blog page for programming projects etc.
+  A blog page for programming projects.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
