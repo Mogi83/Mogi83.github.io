@@ -34,7 +34,7 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Evan
+  name: Mogi83
   #email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -96,7 +96,7 @@ theme_mode: [dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fmake-a-hatsu-for-maxwell-cat-v0-8rgj4diek7ha1.jpg%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3Db326b446becf4815e5d516ddb206726fc5d49c17"
+avatar: "maxwell.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
