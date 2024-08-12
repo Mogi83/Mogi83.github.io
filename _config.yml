@@ -96,7 +96,7 @@ theme_mode: [dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://m.media-amazon.com/images/I/31+8EYj8ZdL._UXNaN_FMjpg_QL85_.jpg"
+avatar: "https://i.kym-cdn.com/photos/images/newsfeed/002/486/154/c06.gif"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
