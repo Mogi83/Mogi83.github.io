@@ -7,7 +7,7 @@ title:  "Inital Commit"
 
 I started this blog as a way to document and review my progress as both a student and a professional. It’s a space where I can reflect on my growth, showcase my programming projects, and share what I’ve learned along the way. My goal is to provide insight into my coding journey, reveal my motivations behind various projects, and offer a glimpse into how I approach problem-solving and development.
 
-While I don’t have a fixed schedule for content just yet, I anticipate that my coursework in Computer Science will naturally influence the topics I cover. Expect to see updates about my programming projects and perhaps other interesting finds in the tech world.
+While I don’t have a fixed schedule for content and probably never will, I anticipate that my coursework in Computer Science will naturally influence the topics I cover. Expect to see updates about my programming projects and perhaps other interesting things im up to that fit here.
 
 ## How its Made, a blog
 
