@@ -7,7 +7,7 @@ order: 4
 
 ### Early Inspirations and Journey into Programming
 
-My fascination with technology began early, from my days playing on my PS2 to getting my first laptop in 2012. Growing up, I dreamed of being an inventor, especially after watching the first Iron Man film in 2007—I wanted to be Tony Stark. My first encounter with programming was through Globaloria in 2012, an online platform where students design and code educational games. Even though my first game didn’t work, the programming bug bit me, and it never let go.
+My fascination with technology began early, from my days playing on my PS2 to getting my first laptop in 2012. Growing up, I dreamed of being an inventor, especially after watching the first Iron Man film in 2008—I wanted to be just like Tony Stark, he was a self made man and didnt have any powers beyond being wealthy. My first encounter with programming was through Globaloria in 2012, an online platform where students design and code educational games. Even though my first game didn’t work, the programming bug bit me, and it never let go.
 
 I’ve also had mentors along the way, most notably my Uncle Matt, who has always been there to answer my beginner questions (sometimes multiple times). Today, I consider him my mentor in the field.
 
