@@ -3,8 +3,6 @@ layout: post
 title:  "Monitoring Network Health with PowerShell: A High Ping and Timeout Logging Script"
 ---
 
-# Monitoring Network Health with PowerShell: A High Ping and Timeout Logging Script
-
 ## Some Background
 Over my summer months I began noticing that I was getting internet drop outs during regular use of my family network but only on my PC. I was still connected to wifi but I couldn't load anything and this was very frustrating. The outage wasn't much longer than a few minutes and would return just as mysteriously as it appeared, but I wanted to get to the bottom of it. This led to a rabbit hole of looking for the problem(s), my PC gets its connection via Wi-Fi from my motherboard and uses two antennas coming out of the IO as its source. My first thought was maybe one my antenna's had become disconnected, damaged, or otherwise was non functioning. That was fine, next I made sure my network adapter's drivers were up to date, and then I got a recommendation from a friend to test out how my connection to my router over a public DNS like Google's 8.8.8.8. This method allowed meto see how my connection is with my router, and my connection to the internet.
 
