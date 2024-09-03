@@ -1,61 +1,26 @@
-# Chirpy Starter
+# Personal Programming Blog https://mogi83.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+## Purpose and Overview
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+This blog was created to document my journey as a student and a professional in computer science. It serves as a platform to reflect on my growth, share my programming projects, and explore what I've learned along the way.
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+## Technology
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+This blog is built using [Jekyll](https://jekyllrb.com/), a popular static site generator, and styled with the [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy). It is backed by [GitHub Pages](https://pages.github.com) for ease of use.
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+- **Jekyll**: Converts Markdown files into static HTML pages, making it easy to manage and update content without dealing with complex server-side code.
+- **Chirpy Theme**: Offers a clean and modern design, optimized for performance and readability, and designed to integrate seamlessly with Jekyll.
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+## Licensing
 
-## Prerequisites
+- **Blog Content:** Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt the content, as long as you provide appropriate credit. While the software in my repositories is licensed under the [MIT License](https://opensource.org/licenses/MIT), my written content (blog posts) falls under the CC BY 4.0 license, allowing for reuse and modification with attribution.
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of
-the basic environment. [Git](https://git-scm.com/) also needs to be installed.
+- **Jekyll and Chirpy:** Both are licensed under the [MIT License](https://opensource.org/licenses/MIT). This allows you to use, modify, and distribute the software freely.
 
-## Installation
+## Resources
 
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it
-`USERNAME.github.io`, where `USERNAME` represents your GitHub username.
+- **Jekyll Documentation:** [Read the official Jekyll docs](https://jekyllrb.com/docs/) to get started with setting up and customizing your site.
+- **Chirpy Theme:** [Check out the Chirpy theme repository](https://github.com/cotes2020/jekyll-theme-chirpy) for more information on how to use and customize the theme.
 
-Then clone it to your local machine and run:
+Feel free to explore the content, adapt the ideas for your own use, and reach out if you have any questions or suggestions!
 
-```console
-$ bundle
-```
-
-## Usage
-
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
-
-## Contributing
-
-The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  
-If you have problems using it, or would like to participate in improving it, please go to the main repository for feedback!
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
