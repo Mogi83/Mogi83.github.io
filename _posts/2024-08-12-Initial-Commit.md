@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Inital Commit"
+title:  "Initial Commit"
 ---
 
 ## Purpose of this Blog
