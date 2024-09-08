@@ -4,7 +4,7 @@ title:  "Monitoring Network Health with PowerShell: A High Ping and Timeout Logg
 ---
 
 ## Some Background
-Over my summer months I began noticing that I was getting internet drop outs during regular use of my family network but only on my PC. I was still connected to wifi but I couldn't load anything and this was very frustrating. The outage wasn't much longer than a few minutes and would return just as mysteriously as it appeared, but I wanted to get to the bottom of it. This led to a rabbit hole of looking for the problem(s), my PC gets its connection via Wi-Fi from my motherboard and uses two antennas coming out of the IO as its source. My first thought was maybe one my antenna's had become disconnected, damaged, or otherwise was non functioning. That was fine, next I made sure my network adapter's drivers were up to date, and then I got a recommendation from a friend to test out how my connection to my router over a public DNS like Google's 8.8.8.8. This method allowed meto see how my connection is with my router, and my connection to the internet.
+Over my summer months I began noticing that I was getting internet drop outs during regular use of my family network but only on my PC. I was still connected to wifi but I couldn't load anything and this was very frustrating. The outage wasn't much longer than a few minutes and would return just as mysteriously as it appeared, but I wanted to get to the bottom of it. This led to a rabbit hole of looking for the problem(s), my PC gets its connection via Wi-Fi from my motherboard and uses two antennas coming out of the IO as its source. My first thought was maybe one my antenna's had become disconnected, damaged, or otherwise was non functioning. That was fine, next I made sure my network adapter's drivers were up to date, and then I got a recommendation from a friend to test out how my connection to my router over a public DNS like Google's 8.8.8.8. This method allowed me to see how my connection is with my router, and my connection to the internet.
 
 ## Why I made this script
 Just to get a basic reading of my current connection I got the IP of my router and like I mentioned earlier used Google's public DNS and threw them into command prompt using the commands:
@@ -15,12 +15,12 @@ Just to get a basic reading of my current connection I got the IP of my router a
 For those who didn't know -t will make the ping command run continuously. So I ended up with two command prompt windows, giving me lines and lines of ping requests it looked something like this:
 
 ![Command prompt ping example](/assets/ping_example.png)
-    
+
 Now I was printing out lines upon lines of ping requests, which does in fact work, but I wanted to automate it and a way to sort through the results, and to know when I had lost connection or otherwise between the two hosts. Hence the entire reason behind this PowerShell ping script.
 ## Relearning PowerShell
-My most recent project posted on GitHub before this was the Hash-GUI script I made **eight years ago**  in python. While I haven't been away from programming for nearly that long and have been working on my own projects I decided that I was going to start uploading again on Github as a good way for me to document my progress, hence this blog. 
+My most recent project posted on GitHub before this was the Hash-GUI script I made **eight years ago** in python. While I haven't been away from programming for nearly that long and have been working on my own projects I decided that I was going to start uploading again on Github as a good way for me to document my progress, hence this blog. 
 
-First I needed to refamiliarize myself with PowerShell syntax. I still had some programming basics from my previous project in early may. I participated in the [Bullet Hell Game Jam](https://itch.io/jam/bullet-hell-v) before I went on to make this script. My game was developed using the [Godot engine](https://godotengine.org), which employs its own scripting language called GDScript, similar to Python. So jumping back into programming with PowerShell, I found it relatively easy to grasp due to my foundational programming knowledge. However, I still utilized some resources to help me get started of which I can highly recommend [Jacked Programmer's PowerShell playlist](https://www.youtube.com/watch?v=NECE5CX69tk&list=PLnK11SQMNnE4vcvuAahz4KhNOS7zOfmB3) in conjunction with the [Powershell documentation](https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01?view=powershell-7.4) to bring this script to life. 
+First I needed to refamiliarize myself with PowerShell syntax. I still had some programming basics from my previous project in early may. I participated in the [Bullet Hell Game Jam](https://itch.io/jam/bullet-hell-v) before I went on to make this script. My game was developed using the [Godot engine](https://godotengine.org), which employs its own scripting language called GDScript, similar to Python. So jumping back into programming with PowerShell, I found it relatively easy to grasp due to my foundational programming knowledge. However, I still utilized some resources to help me get started of which I can highly recommend [Jacked Programmer's PowerShell playlist](https://www.youtube.com/watch?v=NECE5CX69tk&list=PLnK11SQMNnE4vcvuAahz4KhNOS7zOfmB3) in conjunction with the [Powershell documentation](https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01?view=powershell-7.4) to bring this script to life.
 ## What does it actually do?
 This script preforms a periodic ping to a list of specified hosts. It monitors for high latency and connection drops, which are then logged into a txt file. You can edit what hosts you want to ping and how high of a ping threshold do you consider too high and want to be logged.
 
@@ -59,7 +59,7 @@ function Check-Ping {
         # Check for high ping
         if ($responseTime -gt $pingThreshold) {
             Write-Output "High ping detected on $TargetHost - ${responseTime} ms at $timestamp"
-            
+
             # Capture the output with timestamp and other hosts' results
             $logMessage = "High ping detected on ${TargetHost} - ${responseTime} ms at ${timestamp}`n"
             foreach ($currentHost in $hosts) {
@@ -75,7 +75,7 @@ function Check-Ping {
         # Handle timeout or any errors
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
         Write-Output "Request timed out or error occurred on $TargetHost at $timestamp"
-        
+
         # Capture the timeout message with timestamp
         $logMessage = "Request timed out or error occurred on ${TargetHost} at ${timestamp}`n"
         $logMessage += $_.Exception.Message
@@ -92,7 +92,7 @@ while ($true) {
     foreach ($currentHost in $hosts) {
         Check-Ping -TargetHost $currentHost
     }
-    
+
     # Output waiting message and add a line break
     Write-Output "Waiting for 1 second before next check..."
     Write-Output ""  # Adds a blank line
@@ -103,12 +103,12 @@ Read-Host -Prompt "Press Enter to exit"
 ````
 ### In summary:
  1. We setup some variables to hold our list of hosts and our ping threshold.
-    
+
  2. Then our ping function (Check-Ping), compares response
     time to the given threshold and logs results accordingly. It is also
     looking for timeouts and errors but I couldn't figure out how to get
     it to be too specific on what kind of error.
-    
+
  3. All of this goes through our main loop so that we can continuously ping our hosts and see what gets logged over a period of time.
 
 ### Example Log Output:
@@ -127,12 +127,12 @@ Ping result for 8.8.8.8: 203 ms
 ````
 
 ## Results:
-I monitored my network over the course of a full day, and did that over a week or so. My results gave me even more questions as I was getting a mix of reports saying there was high ping to my router and other times where I had a high ping to 8.8.8.8. However overall I found that more often than not I was getting a drop in overall internet connection and staying connected to my router. My data isn't conclusive by any means, I could keep running this script for a larger sample size and make inferences on that but I found that a few days of data worked for me. 
+I monitored my network over the course of a full day, and did that over a week or so. My results gave me even more questions as I was getting a mix of reports saying there was high ping to my router and other times where I had a high ping to 8.8.8.8. However overall I found that more often than not I was getting a drop in overall internet connection and staying connected to my router. My data isn't conclusive by any means, I could keep running this script for a larger sample size and make inferences on that but I found that a few days of data worked for me.
 
 I never did solve my connection issue and just as it had mysteriously shown up after a few weeks of it occurring it left just as strangely.  Not that I am complaining.
 
 # Key Takeaways:
-This project was a big step for me personally, for years I have left and come back to programming without much to show for it. All of my previous programing work consisted of tutorials like code academy, assignments for my AP Computer Science class, and small changes to existing code. This project was an excellent way for me to focus on a real-world problem that I wanted to solve. Instead of learning more fundamentals, or doing an example project like a weather app that is so common, I found it very rewarding that this script is made this for an actual use. 
+This project was a big step for me personally, for years I have left and come back to programming without much to show for it. All of my previous programing work consisted of tutorials like code academy, assignments for my AP Computer Science class, and small changes to existing code. This project was an excellent way for me to focus on a real-world problem that I wanted to solve. Instead of learning more fundamentals, or doing an example project like a weather app that is so common, I found it very rewarding that this script is made this for an actual use.
 
 # Potential Improvements:
 If I were to return to this script I would probably rewrite it again, in a language I am more familiar with. I went with PowerShell because I figured it would be the best option for my machine to accurately capture my data, in retrospect I bet any modern programming language could have done this to varying degrees of success. Here are my thoughts on what I would do to improve this script:
