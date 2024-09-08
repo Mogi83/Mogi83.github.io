@@ -28,17 +28,21 @@ The distinction between front-end and back-end development also differentiates s
 
 **Example:**  
 
-A banking website provides personalized pages based on user authentication. After logging in, the backend generates a custom page showing your account balance.
+A banking website provides personalized pages based on user authentication. After logging in, the backend generates a custom page for that user that shows their account balance.  
+
+This is an example of a dynamic site that utilizes the **full stack**. The full stack is just a piece of software that inorperates both the front end and the back end in one code base, websites like these make up modern webpages.  
 
 
 ## Tools of the Trade:
 
-The demo site I’m working on is a static site. To reiterate from the Initial Commit post, Static sites are built with pre-made or custom assets without connecting to server-side scripts. This means every user sees the same content. In contrast, dynamic sites use server-side scripts to generate pages tailored to each user's request. This has some advantages, namely a reduction in complexity for the developer.
+The demo site I’m working on is a static site hence it's name. I don't intend to dive into the full stack for some time I want to get the front end down first. I will also have a class on the full stack in a few semesters.  
+
+As a refresher from the Initial Commit post, Static sites are built with pre-made or custom assets without connecting to server-side scripts. This means every user sees the same content. In contrast, dynamic sites use server-side scripts to generate pages tailored to each user's request. This has some advantages, namely a reduction in complexity for the developer.
 
 
 **Resources I Used:**
 
-For learning how to build a website, I relied heavily on [W3Schools](https://www.w3schools.com/html/default.asp) for HTML, [CSS](https://www.w3schools.com/css/default.asp), and [JavaScript](https://www.w3schools.com/js/default.asp). They offer comprehensive, well-organized information that you can reference. I found W3Schools's stuff to be extremely useful as I haven't built a website from scratch since 2014!
+For learning how to build a website, I relied heavily on W3Schools for their documentation of [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp), and [JavaScript](https://www.w3schools.com/js/default.asp). They offer comprehensive, well-organized information that you can reference. I found W3Schools's stuff to be extremely useful as I haven't built a website from scratch since 2014!
 
 ## Building the Website from Scratch
 
@@ -67,7 +71,9 @@ Website folder:
 ```
 
 
-This is just my opinion however you want to organize your sites filesystem is up to you, just ensure your files are organized in a way that makes sense to you. Start by writing HTML for your `index.html` page, create a stylesheet, and add any JavaScript you need. To test your site, if you have Python installed, open the windows command prompt and run:
+This is just my opinion however you want to organize your sites filesystem is up to you, just ensure your files are organized in a way that makes sense to you.  
+
+Once you are happy with your folders start by writing HTML for your `index.html` page, create a stylesheet, and add any JavaScript you need. To test your site, if you have Python installed, open the windows command prompt and run:
 
 ```
 python -m http.server 8000
